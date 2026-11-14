@@ -13,6 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->trustProxies(at: '*'); // derrière le proxy HTTPS de Coolify
         // Accès des hôtels recalculé automatiquement (paiement => actif, échéance => suspendu)
         $middleware->web(append: [\App\Http\Middleware\SyncHotelAccess::class]);
         $middleware->alias([
