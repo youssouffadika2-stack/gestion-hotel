@@ -4,3 +4,5 @@ vendor
 .git
 storage/logs/*
 laravel_hotel
+admin_hotel
+deploy

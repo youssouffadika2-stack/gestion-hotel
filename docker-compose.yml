@@ -34,7 +34,7 @@ services:
       - uploads:/var/www/html/uploads
 
   gestion:
-    build: ./gestion-hotel
+    build: .
     restart: unless-stopped
     depends_on: [db]
     environment:
