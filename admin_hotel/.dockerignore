@@ -1,0 +1,4 @@
+uploads/*
+!uploads/index.html
+!uploads/.htaccess
+.git
